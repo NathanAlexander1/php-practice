@@ -41,8 +41,8 @@
                 <button id="clear-btn">Clear</button>
             </div>
         </div>
-        <?php echo 'hello' ?>
+        <!-- <?php echo 'hello' ?> -->
         <?php require ('scripts.php') ?>
-        <?php include 'scripts.php';?>
+        <!-- <?php include 'scripts.php';?> -->
     </body>
 </html>
