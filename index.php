@@ -1,3 +1,5 @@
+<?php require ('scripts.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,38 +13,37 @@
         <header>
             <h1>PHP Calculator</h1>
         </header>
-        <div id="calc-buttons">
-            <textarea name="0" id="" cols="30" rows="10" placeholder="00"></textarea>
-            <div class="button-row">
-                <button id="divide-btn">/</button>
-                <button id="multiply-btn">*</button>
-                <button id="decimal-btn">.</button>
-                <button id="equals-btn">=</button>
-            </div>
-            <div class="button-row">
-                <button id="one-btn">1</button>
-                <button id="two-btn">2</button>
-                <button id="three-btn">3</button>
-                <button id="plus-btn">+</button>
-            </div>
-            <div class="button-row">
-                <button id="four-btn">4</button>
-                <button id="five-btn">5</button>
-                <button id="six-btn">6</button>
-                <button id="minus-btn">-</button>
-            </div>
-            <div class="button-row">
-                <button id="seven-btn">7</button>
-                <button id="eight-btn">8</button>
-                <button id="nine-btn">9</button>
-                <button id="zero-btn">0</button>
-            </div>
-            <div class="button-row">
-                <button id="clear-btn">Clear</button>
-            </div>
+        <div id="calc">
+            <form method="post">
+                <input type="text" name="display" class="display" value="<?php echo isset($_SESSION['display']) ? htmlspecialchars($_SESSION['display']) : '';?>" readonly>
+                <div class="button-row">
+                    <button class="calc-btn" type="submit" name="btn" value="/" >/</button>
+                    <button class="calc-btn" type="submit" name="btn" value="*" >*</button>
+                    <button class="calc-btn" type="submit" name="btn" value="." >.</button>
+                    <button class="calc-btn" type="submit" name="btn" value="=" >=</button>
+                </div>
+                <div class="button-row">
+                    <button class="calc-btn" type="submit" name="btn" value="1" >1</button>
+                    <button class="calc-btn" type="submit" name="btn" value="2" >2</button>
+                    <button class="calc-btn" type="submit" name="btn" value="3" >3</button>
+                    <button class="calc-btn" type="submit" name="btn" value="+" >+</button>
+                </div>
+                <div class="button-row">
+                    <button class="calc-btn" type="submit" name="btn" value="4" >4</button>
+                    <button class="calc-btn" type="submit" name="btn" value="5" >5</button>
+                    <button class="calc-btn" type="submit" name="btn" value="6" >6</button>
+                    <button class="calc-btn" type="submit" name="btn" value="-" >-</button>
+                </div>
+                <div class="button-row">
+                    <button class="calc-btn" type="submit" name="btn" value="7" >7</button>
+                    <button class="calc-btn" type="submit" name="btn" value="8" >8</button>
+                    <button class="calc-btn" type="submit" name="btn" value="9" >9</button>
+                    <button class="calc-btn" type="submit" name="btn" value="0" >0</button>
+                </div>
+                <div class="button-row">
+                <button id="clear-btn" type="submit" name="btn" value="C" >Clear</button>
+                </div>
+            </form>
         </div>
-        <!-- <?php echo 'hello' ?> -->
-        <?php require ('scripts.php') ?>
-        <!-- <?php include 'scripts.php';?> -->
     </body>
 </html>

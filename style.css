@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-#calc-buttons {
+#calc {
     border: 2px solid black;
     padding: 10px;
     display: flex;
@@ -21,12 +21,13 @@ body {
 .button-row {
     margin: 15px;
     align-self: center;
-
-
 }
 button {
     padding: 5px;
     margin: 5px;
     min-width: 50px;
     height: 50px;
+}
+#clear-btn, .display {
+    width: 100%;
 }
